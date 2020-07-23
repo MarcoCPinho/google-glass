@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title>
-    <link rel="stylesheet" type="text/css" href="_css/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="_css/form.css">
-    <script language="javascript" src="_javascript/funcoes.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <script language="javascript" src="javascript/funcoes.js"></script>
     <script>
-        function calc_total(){
+        function calc_total() {
             var qtd = parseInt(document.getElementById('cQtd').value)
             tot = qtd * 1500;
             document.getElementById('cTot').value = tot;
@@ -24,21 +24,22 @@
                 <h1>Google Glass</h1>
                 <h2>A revolução do Google está chegando</h2>
             </hgroup>
-            <img id="icone" src="_imagens/contato.png" alt="">
+            <img id="icone" src="imagens/contato.png" alt="">
 
             <nav id="menu">
                 <h1>Menu Principal</h1>
                 <ul type="circle">
-                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="index.html">Home</a></li>
-                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
-                        onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
-                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
+                    <li onmouseover="mudaFoto('imagens/home.png')" onmouseout="mudaFoto('imagens/contato.png')">
+                        <a href="index.html">Home</a></li>
+                    <li onmouseover="mudaFoto('imagens/especificacoes.png')"
+                        onmouseout="mudaFoto('imagens/contato.png')">
+                        <a href="specs.html">Especificações</a></li>
+                    <li onmouseover="mudaFoto('imagens/fotos.png')" onmouseout="mudaFoto('imagens/contato.png')">
+                        <a href="fotos.html">Fotos</a></li>
+                    <li onmouseover="mudaFoto('imagens/multimidia.png')" onmouseout="mudaFoto('imagens/contato.png')">
                         <a href="multimidia.html">Multimídia</a></li>
-                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="fale-conosco.html">Fale conosco</a></li>
+                    <li onmouseover="mudaFoto('imagens/contato.png')" onmouseout="mudaFoto('imagens/contato.png')">
+                        <a href="fale-conosco.html">Fale conosco</a></li>
                     </ol>
             </nav>
         </header>
@@ -75,7 +76,6 @@
                 <p><label for="cNasc">Data de Nascimento:</label for="cNasc"> <input type="date" name="tNasc"
                         id="cNasc"> </p>
             </fieldset>
-
             <fieldset id="endereco">
                 <legend>Endereço do Usuário</legend>
                 <p><label for="cRua">Logradouro:</label for="cRua"> <input type="text" name="tRua" id="cRua" size="13"
@@ -95,33 +95,35 @@
                             <option value="RS">Rio Grande do Sul</option>
                         </optgroup label="Região Sul">
                     </select></p>
-
-                <p><label for="cCid">Cidade: </label for="cCid"> <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
-                    <datalist id="cidades">
-                        <option value="Rio de Janeiro"></option>
-                        <option value="Nova Iguaçu"></option>
-                        <option value="Niteroi"></option>
-                        <option value="Belford Roxo"></option>
-                    </datalist>
-                </fieldset>
-
+                <p><label for="cCid">Cidade: </label for="cCid"> <input type="text" name="tCid" id="cCid" maxlength="40"
+                        size="20" placeholder="Sua Cidade" list="cidades"></p>
+                <datalist id="cidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Nova Iguaçu"></option>
+                    <option value="Niteroi"></option>
+                    <option value="Belford Roxo"></option>
+                </datalist>
+            </fieldset>
             <fieldset id="mensagem">
                 <legend>Mensagem do Usuário</legend>
-                <p><label for="cUrg">Grau de Urgência:</label for="cPed">Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max</p>
-                <p><label for="cMsg">Mensagem:</label for="cMsg"> <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea> </p>
+                <p><label for="cUrg">Grau de Urgência:</label for="cPed">Min<input type="range" name="tUrg" id="cUrg"
+                        min="0" max="10" step="2" />Max</p>
+                <p><label for="cMsg">Mensagem:</label for="cMsg"> <textarea name="tMsg" id="cMsg" cols="35" rows="5"
+                        placeholder="Deixe aqui sua mensagem"></textarea> </p>
             </fieldset>
-
             <fieldset id="pedido">
                 <legend>Quero um Google Glass</legend>
-                <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label for="cPed"></p>
-                <p><label for="cCor">Cor:</label for="cCor"> <input type="color" name="tCor" id="cCor" value="#0000FF"> </p>
-                <p><label for="cQtd">Quantidade:</label for="cQtd"> <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></input> </p>
-                <p><label for="cTot">Preço Total: R$</label for="cTot"> <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly> </p>
+                <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google
+                        Glass quando disponível</label for="cPed"></p>
+                <p><label for="cCor">Cor:</label for="cCor"> <input type="color" name="tCor" id="cCor" value="#0000FF">
+                </p>
+                <p><label for="cQtd">Quantidade:</label for="cQtd"> <input type="number" name="tQtd" id="cQtd" min="0"
+                        max="5" value="0"></input> </p>
+                <p><label for="cTot">Preço Total: R$</label for="cTot"> <input type="text" name="tTot" id="cTot"
+                        placeholder="Total a pagar" readonly> </p>
             </fieldset>
-
-            <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+            <input type="image" name="tEnviar" src="imagens/botao-enviar.png">
         </form>
-
         <footer id="rodape">
             <p>Copyright 2020 - by Marco Pinho<br>
                 <a href="https://www.facebook.com/marcomaradona" target="_blank">Facebook</a> | <a
@@ -129,6 +131,6 @@
         </footer>
     </div>
 </body>
-<script language="javascript" src="_javascript/funcoes.js"></script>
+<script language="javascript" src="javascript/funcoes.js"></script>
 
 </html>
